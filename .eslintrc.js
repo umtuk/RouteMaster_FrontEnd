@@ -10,7 +10,7 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   rules: {
-    'linebreak-style': 0,
+    'linebreak-style': 1,
     'import/prefer-default-export': 0,
     'import/extensions': 0,
     'no-use-before-define': 0,
@@ -26,6 +26,7 @@ module.exports = {
     'jsx-a11y/no-noninteractive-element-interactions': 0,
     '@typescript-eslint/explicit-module-boundary-types': 0,
     // personal
+    'prettier/prettier': 1,
   },
   settings: {
     'import/resolver': {
