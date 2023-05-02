@@ -13,7 +13,6 @@ pipeline {
                }
            }
        }
-       scp
        stage('Deploy') {
            steps {
                dir('route-master') { 
