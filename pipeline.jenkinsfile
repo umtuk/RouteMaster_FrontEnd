@@ -9,15 +9,16 @@ pipeline {
        stage('Build') {
            steps {
                dir('route-master') {
-                   sh "npm run build"
+                   sh 'npm run build'
                }
            }
        }
+       scp
        stage('Deploy') {
            steps {
-               dir('backend/build/libs') {
-                   sshagent(credentials: ['key-dallog']) {
-                        sh 'scp ./public/index.html ubuntu@192.168.XXX.XXX:/home/ubuntu/'
+               dir('route-master') { 
+                    sshagent(credentials: ['ubuntu']) { 
+                        sh 'scp -r ./build /home/ubuntu/public/@route-master.org'
                     }
                }
            }
