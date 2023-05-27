@@ -1,10 +1,11 @@
-body {
+.body {
     justify-content: center;
     align-items: center;
+    width:100%;
 }
 
-.header {
-    width:100%;
+h1 {
+    display: inline-block;
 }
 
 ul {
@@ -17,22 +18,48 @@ ul {
     margin: 0 10px;
 }
 
-.nav {
+.header_top {
     width: 100%;
     height: fit-content;
+    display: flex;
+    justify-content: space-around;
 }
 
-button {
+.header_bottom {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content:center;
+}
+
+.header_btn_container {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+.header_btn {
+    width: 5rem;
+    height: 2rem;
+    border-radius: 1px;
+    border: none;
+    background-color: none;
+    margin: 0 0.5rem;
+}
+.header_btn:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+.nav_btn {
     width: 150px;
-    height: 150px;
-    height: auto;
+    height: 3rem;
     background-color: white;
     border-radius: 5px;
     transition: all 0.4s;
     border: solid 1px;
     font-size: 20px;
 }
-button:hover {
+.nav_btn:hover {
     background-color: black;
     color: white;
     cursor: pointer;
@@ -49,5 +76,4 @@ a:hover {
 img {
     width: 20%;
     height: 60%;
-    float: left;
 }
