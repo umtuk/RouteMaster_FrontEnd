@@ -1,9 +1,12 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header/Header';
 
-function Main(): JSX.Element {
+function Main() {
   return (
-    <Header />
+    <>
+      <Header />
+      <Link to="/plan-list">go to plan list page</Link>
+    </>
   );
 }
 

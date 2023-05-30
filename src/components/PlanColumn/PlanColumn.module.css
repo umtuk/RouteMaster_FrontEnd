@@ -1,0 +1,23 @@
+.body {
+    position: relative;
+    box-shadow: 12px 0 12px -12px rgba(0,0,0,.4);
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 1rem 0;
+    min-width: 320px;
+    max-width: 30%;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+@media screen and (min-width: 768px) {     /* screen이 768px보다 클때까진 width에서 속성 적용 */
+  .PlanColumn__container__1Z1ZP {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 1rem;
+    min-width: 442;
+  }
+}
