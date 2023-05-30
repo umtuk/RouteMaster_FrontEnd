@@ -1,10 +1,11 @@
 .body {
-    flex: left;
+    position: relative;
     box-shadow: 12px 0 12px -12px rgba(0,0,0,.4);
     background-color: #f2f2f2;
     margin: 0;
     padding: 1rem 0;
     min-width: 320px;
+    max-width: 30%;
     justify-content: space-around;
     height: 100vh;
 }
