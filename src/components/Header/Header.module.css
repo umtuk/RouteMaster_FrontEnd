@@ -64,7 +64,7 @@ ul {
     color: white;
     cursor: pointer;
 }
-a:hover {
+.nav_btn:hover a {
     color: white;
 }
 
