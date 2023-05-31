@@ -24,6 +24,12 @@ module.exports = {
       { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
     ],
     'jsx-a11y/no-noninteractive-element-interactions': 0,
+    'jsx-a11y/label-has-associated-control': [
+      2,
+      {
+        lableAttributes: ['htmlFor'],
+      },
+    ],
     '@typescript-eslint/explicit-module-boundary-types': 0,
     // personal
     'prettier/prettier': 1,

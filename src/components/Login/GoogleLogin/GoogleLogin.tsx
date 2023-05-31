@@ -1,12 +1,11 @@
-import React from 'react';
+import styles from './GoogleLogin.module.css';
 
 function GoogleLogin(): JSX.Element {
   return (
-    <button type="submit">
-        Google Login
+    <button className={styles.btn} type="submit">
+      Google Login
     </button>
   );
 }
 
 export default GoogleLogin;
-
