@@ -29,7 +29,7 @@ function Header(): JSX.Element {
         <ul>
           <li className={styles.li}>
             <button type="button" className={styles.nav_btn}>
-              <Link to="/">Hotels</Link>
+              <Link to="/hotels">Hotels</Link>
             </button>
           </li>
           <li className={styles.li}>
