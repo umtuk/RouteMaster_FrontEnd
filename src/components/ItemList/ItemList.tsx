@@ -11,7 +11,7 @@ function ItemList(): JSX.Element {
       </div>
     </li>
   ));
-  return <ul>{lists}</ul>;
+  return <ul className={styles.ul}>{lists}</ul>;
 }
 
 export default ItemList;
