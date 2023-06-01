@@ -10,6 +10,7 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   rules: {
+    'react/jsx-props-no-spreading': 'off',
     'linebreak-style': 1,
     'import/prefer-default-export': 0,
     'import/extensions': 0,
@@ -25,7 +26,6 @@ module.exports = {
     ],
     'jsx-a11y/no-noninteractive-element-interactions': 0,
     'jsx-a11y/label-has-associated-control': [
-      2,
       {
         lableAttributes: ['htmlFor'],
       },
