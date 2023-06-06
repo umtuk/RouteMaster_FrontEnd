@@ -1,57 +1,58 @@
 .body {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width:100%;
+    margin-bottom: 3rem;
 }
 
-h1 {
-    display: inline-block;
-}
-
-ul {
+.ul {
+    display: flex;
     list-style: none;
-    overflow: hidden;
+    overflow: scroll;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
 }
 
 .li {
-    float: left;
-    margin: 0 10px;
+    width: 200px;
 }
 
-.header_top {
+.headerTop {
     width: 100%;
     height: fit-content;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 0;
 }
 
-.header_bottom {
+.headerBottom {
     width: 100%;
     height: fit-content;
-    display: flex;
-    justify-content:center;
 }
 
-.header_btn_container {
-    width: fit-content;
+.headerBtnContainer {
+    width: 18rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
-.header_btn {
+.headerBtn {
     width: 5rem;
-    height: 2rem;
-    border-radius: 1px;
+    height: 2.5rem;
+    border-radius: 20px;
     border: none;
     background-color: none;
-    margin: 0 0.5rem;
 }
-.header_btn:hover {
+.headerBtn:hover {
     background-color: #f2f2f2;
     cursor: pointer;
 }
 
-.nav_btn {
-    width: 150px;
+.navBtn {
+    width: 100%;
     height: 3rem;
     background-color: white;
     border-radius: 5px;
@@ -59,21 +60,29 @@ ul {
     border: solid 1px;
     font-size: 20px;
 }
-.nav_btn:hover {
+.navBtn:hover {
     background-color: black;
     color: white;
     cursor: pointer;
 }
-.nav_btn:hover a {
+.navBtn:hover a {
     color: white;
 }
 
-.header__logo {
-    width: 300px;
+.headerLogo {
+    display: flex;
+    width: fit-content;
+    justify-content: center;
     height: 100px;
 }
 
+.headerName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 img {
-    width: 20%;
-    height: 60%;
+    width: 100%;
+    height: 100%;
 }
