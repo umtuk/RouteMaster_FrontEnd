@@ -1,14 +1,13 @@
-import React from 'react';
-import Header from '../components/Header/Header';
+import MainHeader from '../components/MainHeader/MainHeader';
 import Calendar from '../components/Calendar/Calendar';
 import SearchBar from '../components/SearchBar/SearchBar';
 
 function Main(): JSX.Element {
   return (
     <div>
-      <Header />
-      <div 
-        style={{ 
+      <MainHeader />
+      <div
+        style={{
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
@@ -16,7 +15,8 @@ function Main(): JSX.Element {
           height: '300px',
           padding: '100px auto',
           margin: '5rem auto',
-          backgroundColor: '#C0FFBA', }}
+          backgroundColor: '#C0FFBA',
+        }}
       >
         <SearchBar />
       </div>
