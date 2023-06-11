@@ -4,9 +4,7 @@ import MainHeader from '../components/MainHeader/MainHeader';
 
 function Hotels(): JSX.Element {
   return (
-    <div>
-      <MainHeader />
-      <div
+    <div
         style={{
           display: 'flex',
           justifyContent: 'center',
@@ -14,10 +12,9 @@ function Hotels(): JSX.Element {
           margin: '0 auto',
           paddingTop: '5rem',
         }}
-      >
-        <SideFilteringBar />
-        <ItemList />
-      </div>
+    >
+      <SideFilteringBar />
+      <ItemList />
     </div>
   );
 }
