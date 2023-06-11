@@ -3,7 +3,7 @@ import './App.css';
 import Main from './pages/main';
 import Login from './pages/login';
 import PlanList from './pages/plan-list';
-import Plans from './pages/plans';
+import Plans from './pages/Plans/plans';
 import Hotels from './pages/hotels';
 import Calculation from './pages/calculation';
 
