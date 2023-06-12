@@ -1,13 +1,12 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Layout from 'components/Layout/Layout';
+import Calculation from 'pages/Calculation/Calculation';
 import Main from './pages/main';
 import Login from './pages/login';
 import PlanList from './pages/plan-list';
 import Plans from './pages/plans';
 import Hotels from './pages/hotels';
-import Calculation from './pages/calculation';
-
-import Layout from './components/Layout/Layout';
 
 function App(): JSX.Element {
   return (
