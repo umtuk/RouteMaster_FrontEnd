@@ -1,4 +1,5 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import styles from './KakaoMaps.module.css';
 
 declare global {
   interface Window {
@@ -9,17 +10,17 @@ declare global {
 const { kakao } = window;
 
 function KakaoMaps(): JSX.Element {
+  const mapRef = useRef(null);
+
   useEffect(() => {
-    const container = document.getElementById('map');
-    const options = {
-      center: new kakao.maps.LatLng(33.450701, 126.570667),
+    const map = new kakao.maps.Map(mapRef.current, {
+      center: new kakao.maps.LatLng(37.5665, 126.978),
       level: 3,
-    };
-    const map = new kakao.maps.Map(container, options);
+    });
   }, []);
 
   return (
-    <div id="map" style={{ width: '100%', height: '100%' }}> </div>
+    <div id="map" ref={mapRef} className={styles.body}> </div>
   );
 }
 
