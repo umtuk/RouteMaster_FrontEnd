@@ -21,9 +21,6 @@ function PriceList(): JSX.Element {
         </div>
         <div className={styles.price}>₩ 000,000</div>
       </div>
-      <div>
-        <button type="submit">정산하기</button>
-      </div>
     </div>
   );
 }
