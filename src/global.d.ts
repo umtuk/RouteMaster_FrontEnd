@@ -4,3 +4,9 @@ declare module '*.module.css' {
 }
 
 declare module '*.png';
+
+declare global {
+  interface Window {
+    kakao: any;
+  }
+}
