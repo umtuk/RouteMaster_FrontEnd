@@ -9,6 +9,12 @@ import PlanList from './pages/plan-list';
 import Plans from './pages/Plans/plans';
 import Hotels from './pages/hotels';
 
+declare global {
+  interface Window {
+    kakao: any;
+  }
+}
+
 function App(): JSX.Element {
   return (
     <div className="App">

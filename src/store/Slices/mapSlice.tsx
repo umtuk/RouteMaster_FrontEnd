@@ -21,14 +21,15 @@ export const mapSlice = createSlice({
   initialState,
   reducers: {
     setCenter: (state, action: PayloadAction<{ lat: number; lng: number }>) => {
-      Object.assign(state, { center: action.payload });
+      state.center = action.payload;
     },
     setLevel: (state, action: PayloadAction<number>) => {
-      Object.assign(state, { level: action.payload });
+      state.level = action.payload;
     },
   },
 });
 
 export const { setCenter } = mapSlice.actions;
+export const { setLevel } = mapSlice.actions;
 
 export default mapSlice.reducer;
