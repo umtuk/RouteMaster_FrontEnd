@@ -7,9 +7,11 @@ function Header(): JSX.Element {
     <header className={styles.body}>
       <div className={styles.headerTop}>
         <div className={styles.headerLogo}>
-          <Link to="/">
-            <img src={LogoImage} alt="logo" />
-          </Link>
+          <div className={styles.img_container}>
+            <Link to="/">
+              <img src={LogoImage} alt="logo" />
+            </Link>
+          </div>
           <div className={styles.headerName}>
             <h1>Route Master</h1>
           </div>
