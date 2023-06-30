@@ -4,55 +4,55 @@ import LogoImage from '../../assets/images/logo_green.png';
 
 function Header(): JSX.Element {
   return (
-    <header className={styles.body}>
-      <div className={styles.headerTop}>
-        <div className={styles.headerLogo}>
+    <header className={styles.container}>
+      <div className={styles.header_top}>
+        <div className={styles.logo_container}>
           <div className={styles.img_container}>
             <Link to="/">
-              <img src={LogoImage} alt="logo" />
+              <img src={LogoImage} alt="logo" className={styles.logo_img} />
             </Link>
           </div>
-          <div className={styles.headerName}>
+          <div className={styles.header_name}>
             <h1>Route Master</h1>
           </div>
         </div>
-        <div className={styles.headerBtnContainer}>
-          <button type="button" className={styles.headerBtn}>
+        <div className={styles.header_btn_container}>
+          <button type="button" className={styles.header_btn}>
             <Link to="/plan-list">Trips</Link>
           </button>
-          <button type="button" className={styles.headerBtn}>
+          <button type="button" className={styles.header_btn}>
             <Link to="/">Language</Link>
           </button>
-          <button id="login-btn" type="button" className={styles.headerBtn}>
+          <button id="login-btn" type="button" className={styles.header_btn}>
             <Link to="/login">Login</Link>
           </button>
         </div>
       </div>
 
-      <div className={styles.headerBottom}>
-        <ul className={styles.ul}>
-          <li className={styles.li}>
-            <button type="button" className={styles.navBtn}>
+      <div className={styles.header_bottom}>
+        <ul className={styles.nav}>
+          <li className={styles.nav_item}>
+            <button type="button" className={styles.nav_btn}>
               <Link to="/hotels">Hotels</Link>
             </button>
           </li>
-          <li className={styles.li}>
-            <button type="button" className={styles.navBtn}>
+          <li className={styles.nav_item}>
+            <button type="button" className={styles.nav_btn}>
               <Link to="/">Flights</Link>
             </button>
           </li>
-          <li className={styles.li}>
-            <button type="button" className={styles.navBtn}>
+          <li className={styles.nav_item}>
+            <button type="button" className={styles.nav_btn}>
               <Link to="/">Activities</Link>
             </button>
           </li>
-          <li className={styles.li}>
-            <button type="button" className={styles.navBtn}>
+          <li className={styles.nav_item}>
+            <button type="button" className={styles.nav_btn}>
               <Link to="/">Rentals</Link>
             </button>
           </li>
-          <li className={styles.li}>
-            <button type="button" className={styles.navBtn}>
+          <li className={styles.nav_item}>
+            <button type="button" className={styles.nav_btn}>
               <Link to="/">Restaurants</Link>
             </button>
           </li>
