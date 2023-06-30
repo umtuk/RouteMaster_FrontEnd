@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 40px;
+  margin-bottom: 10px;
+}
+
+.person {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.person > img {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  padding: 5%;
+}
+
+.price {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin: 15px;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0;
+}

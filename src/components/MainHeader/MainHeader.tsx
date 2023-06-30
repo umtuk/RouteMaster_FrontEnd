@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import styles from './Header.module.css';
+import styles from './MainHeader.module.css';
 import LogoImage from '../../assets/images/logo_green.png';
 
-function Header(): JSX.Element {
+function MainHeader(): JSX.Element {
   return (
     <header className={styles.container}>
       <div className={styles.header_top}>
@@ -62,4 +62,4 @@ function Header(): JSX.Element {
   );
 }
 
-export default Header;
+export default MainHeader;

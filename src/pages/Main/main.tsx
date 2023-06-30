@@ -1,5 +1,4 @@
-import React from 'react';
-import Header from '../../components/Header/Header';
+import MainHeader from 'components/MainHeader/MainHeader';
 import Calendar from '../../components/Calendar/Calendar';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import styles from './main.module.css';
@@ -7,7 +6,7 @@ import styles from './main.module.css';
 function Main(): JSX.Element {
   return (
     <div className={styles.body}>
-      <Header />
+      <MainHeader />
       <div className={styles.searchContainer}>
         <SearchBar />
       </div>
