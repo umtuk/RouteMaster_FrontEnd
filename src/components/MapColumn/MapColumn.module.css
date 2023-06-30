@@ -6,3 +6,10 @@
     overflow-x: hidden;
     overflow-y: scroll;
 }
+
+.searchbar {
+    position: absolute;
+    top: 255px;
+    right: 50px;
+    z-index: 1;
+}

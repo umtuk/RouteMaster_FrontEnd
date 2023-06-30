@@ -1,27 +1,33 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from 'store/store';
-import { setLevel } from 'store/Slices/mapSlice';
+import { useRef, useState } from 'react';
 
 import KakaoMaps from '../KakaoMaps/KakaoMaps';
 import MapColumnLevelController from './LevelController/LevelController';
+import MapColumnSearchBar from './SearchBar/SearchBar';
 import styles from './MapColumn.module.css';
 
 function MapColumn(): JSX.Element {
-  const dispatch = useDispatch();
-  const center = useSelector((state: RootState) => state.map.center);
-  const level = useSelector((state: RootState) => state.map.level);
+  const [map, setMap] = useState<any>(null);
+  const [keyword, setKeyword] = useState('');
+  const searchBarRefs = {
+    inputRef: useRef<HTMLInputElement>(null),
+    placeListRef: useRef<HTMLUListElement>(null),
+    paginationRef: useRef<HTMLDivElement>(null),
+  };
 
   const zoomIn = () => {
-    if (level > 1 && level < 15) dispatch(setLevel(level - 1));
+    if (map) map.setLevel(map.getLevel() - 1);
   };
 
   const zoomOut = () => {
-    if (level > 0 && level < 14) dispatch(setLevel(level + 1));
+    if (map) map.setLevel(map.getLevel() + 1);
   };
 
   return (
     <div className={styles.body}>
-      <KakaoMaps mycenter={center} mylevel={level} />
+      <KakaoMaps map={map} setMap={setMap} keyword={keyword} />
+      <div id="hi" className={styles.searchbar}>
+        <MapColumnSearchBar {...searchBarRefs} setKeyword={setKeyword} />
+      </div>
       <MapColumnLevelController zoomIn={zoomIn} zoomOut={zoomOut} />
     </div>
   );
