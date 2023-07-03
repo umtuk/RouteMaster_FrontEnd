@@ -19,10 +19,9 @@ Hyeongjin Lee - [Hyeongjin's github](https://github.com/Lee-Hyeong-Jin)
 For most of our code, we follow AirBnB Style Guide
 
 ### 2. Branch Naming Convention
-* We do not use upper cases
-* When space is needed, we use an undder bar
-  * Ex) feature/time_map
+* We use upper snake_case after the commit type
 
 ### 3. Code Naming Convetion
-* We use CamelCase for component name and page name.
+* We use PascalCase for component and page name
 * We use snake_case for css class name
+* We use camelCase for variables
