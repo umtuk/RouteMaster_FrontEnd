@@ -4,13 +4,17 @@ import LogoImage from '../../assets/images/logo_green.png';
 
 function MainHeader(): JSX.Element {
   return (
-    <header className={styles.body}>
+    <header className={styles.container}>
       <div className={styles.header_top}>
-        <div className={styles.header__logo}>
-          <Link to="/">
-            <img src={LogoImage} alt="logo" />
-          </Link>
-          <h1>Route Master</h1>
+        <div className={styles.logo_container}>
+          <div className={styles.img_container}>
+            <Link to="/">
+              <img src={LogoImage} alt="logo" className={styles.logo_img} />
+            </Link>
+          </div>
+          <div className={styles.header_name}>
+            <h1>Route Master</h1>
+          </div>
         </div>
         <div className={styles.header_btn_container}>
           <button type="button" className={styles.header_btn}>
@@ -26,28 +30,28 @@ function MainHeader(): JSX.Element {
       </div>
 
       <div className={styles.header_bottom}>
-        <ul>
-          <li className={styles.li}>
+        <ul className={styles.nav}>
+          <li className={styles.nav_item}>
             <button type="button" className={styles.nav_btn}>
               <Link to="/hotels">Hotels</Link>
             </button>
           </li>
-          <li className={styles.li}>
+          <li className={styles.nav_item}>
             <button type="button" className={styles.nav_btn}>
               <Link to="/">Flights</Link>
             </button>
           </li>
-          <li className={styles.li}>
+          <li className={styles.nav_item}>
             <button type="button" className={styles.nav_btn}>
               <Link to="/">Activities</Link>
             </button>
           </li>
-          <li className={styles.li}>
+          <li className={styles.nav_item}>
             <button type="button" className={styles.nav_btn}>
               <Link to="/">Rentals</Link>
             </button>
           </li>
-          <li className={styles.li}>
+          <li className={styles.nav_item}>
             <button type="button" className={styles.nav_btn}>
               <Link to="/">Restaurants</Link>
             </button>
