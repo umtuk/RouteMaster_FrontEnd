@@ -4,11 +4,13 @@ import Layout from 'components/Layout/Layout';
 import Calculation from 'pages/Calculation/Calculation';
 import CalculationDetail from 'pages/Calculation/Detail/Detail';
 import Profile from 'pages/Profile/Profile';
-import Main from './pages/main';
+import RestaurantDetails from 'pages/Restaurant/Details';
+import Main from 'pages/Main/main';
 import Login from './pages/login';
 import PlanList from './pages/plan-list';
 import Plans from './pages/Plans/plans';
 import Hotels from './pages/hotels';
+import Restaurant from './pages/Restaurant/Restaurant';
 
 declare global {
   interface Window {
@@ -34,6 +36,11 @@ function App(): JSX.Element {
             <Route
               path="/calculate/:id/:name"
               element={<CalculationDetail />}
+            />
+            <Route path="/restaurant" element={<Restaurant />} />
+            <Route
+              path="restaurant/details/:id"
+              element={<RestaurantDetails />}
             />
           </Route>
         </Routes>
