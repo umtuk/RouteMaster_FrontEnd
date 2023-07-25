@@ -20,7 +20,9 @@ function LikeButton() {
         border: '1 solid black',
         borderRadius: '50%',
       }}
-      onClick={() => {
+      onClick={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
         setImgSrc(imgSrc === EmptyHeart ? FullHeart : EmptyHeart);
       }}
     >
