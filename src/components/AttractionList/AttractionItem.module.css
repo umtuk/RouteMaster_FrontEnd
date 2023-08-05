@@ -1,10 +1,4 @@
 .container {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
-
-.li {
     display: flex;
     width: 90%;
     height: 15rem;
@@ -14,18 +8,8 @@
     cursor: pointer;
     flex-basis: 90%;
 }
-.li:hover {
+.container:hover {
     box-shadow: 3px 3px 5px #E0E0E0;
-}
-
-.info_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    height: 100%;
-    padding: 0 1rem;
 }
 
 .thumb_container {
@@ -45,4 +29,22 @@
     width: 100%;
     height: 100%;
     margin: 0;
+}
+
+.info_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+}
+
+.price_and_review {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
 }

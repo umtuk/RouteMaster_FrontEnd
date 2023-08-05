@@ -1,4 +1,4 @@
-import ItemList from '../components/ItemList/ItemList';
+import AttractionList from '../components/AttractionList/AttractionList';
 import SideFilteringBar from '../components/SideFilteringBar/SideFilteringBar';
 
 function Hotels(): JSX.Element {
@@ -13,7 +13,7 @@ function Hotels(): JSX.Element {
       }}
     >
       <SideFilteringBar type="hotels" />
-      <ItemList />
+      <AttractionList />
     </div>
   );
 }

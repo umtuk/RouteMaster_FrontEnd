@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import LikeButton from 'components/LikeButton/LikeButton';
 import { Link } from 'react-router-dom';
-import styles from './ItemList.module.css';
+import AttractionItem from './AttractionItem';
+import styles from './AttractionList.module.css';
 
 interface Attraction {
   title: string;
@@ -39,7 +39,7 @@ interface ApiResponse {
   totalCount: number;
 }
 
-function ItemList(): JSX.Element {
+function AttractionList(): JSX.Element {
   const [data, setData] = useState<Attraction[] | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [page, setpage] = useState<number>(1);
@@ -89,28 +89,15 @@ function ItemList(): JSX.Element {
   return (
     <ul className={styles.container}>
       {data.map((item) => (
-        <Link to={`/restaurant/details/${item.contentId}`} key={`link-${item.contentId}`}>
-          <li key={`li-${item.contentId}`} className={styles.li}>
-            <div className={styles.thumb_container}>
-              <img src={item.image} alt="" className={styles.thumb} />
-              <div className={styles.likebtn}>
-                <LikeButton />
-              </div>
-            </div>
-            <div className={styles.info_container}>
-              <h2>{item.title}</h2>
-              <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '100%'}}>
-                <div>
-                  <h3>Price</h3>
-                  <h2>1000원</h2>
-                </div>
-                <div>
-                  <h3>리뷰</h3>
-                  <h2>별점</h2>
-                </div>
-              </div> 
-            </div>
-          </li>
+        <Link
+          to={`/restaurant/details/${item.contentId}`}
+          key={`link-${item.contentId}`}
+        >
+          <AttractionItem
+            id={item.contentId}
+            thumb={item.thumbnailImage}
+            title={item.title}
+          />
         </Link>
       ))}
       {!isLoading && <div>로딩중...</div>}
@@ -118,4 +105,4 @@ function ItemList(): JSX.Element {
   );
 }
 
-export default ItemList;
+export default AttractionList;
