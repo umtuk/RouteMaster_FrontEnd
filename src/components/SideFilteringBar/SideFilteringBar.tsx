@@ -17,12 +17,18 @@ function SideFilteringBar({ type }: Props): JSX.Element {
       ]);
     } else if (type === 'activities') {
       setDict([
-        { category: '종류별', options: ['전시', '공연', '뮤지컬', '레저', '기타'] },
+        {
+          category: '종류별',
+          options: ['전시', '공연', '뮤지컬', '레저', '기타'],
+        },
         { category: '평점별', options: ['5점', '4점', '3점', '2점', '1점'] },
       ]);
     } else if (type === 'restaurants') {
       setDict([
-        { category: '종류별', options: ['한식', '중식', '일식', '양식', '기타'] },
+        {
+          category: '종류별',
+          options: ['한식', '중식', '일식', '양식', '기타'],
+        },
         { category: '평점별', options: ['5점', '4점', '3점', '2점', '1점'] },
       ]);
     }
