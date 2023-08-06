@@ -19,7 +19,8 @@ pipeline {
            steps {
                dir('route-master') { 
                     sshagent(credentials: ['78c5e617-5867-48ee-8300-3ffc1637fcc8']) {
-                        sh 'scp -r ./build /home/ubuntu/public/@route-master.org'
+                        sh 'ls -al'
+                        sh 'scp -r /var/jenkins_home/workspace/front-end/route-master/build /home/ubuntu/public/@route-master.org'
                     }
                }
            }
