@@ -9,7 +9,9 @@ pipeline {
        stage('Build') {
            steps {
                dir('route-master') {
-                   sh 'npm run build'
+                    nodejs(nodeJSInstallationName: 'node') {
+                        sh 'npm install && npm run build'
+                    }
                }
            }
        }
@@ -17,6 +19,7 @@ pipeline {
            steps {
                dir('route-master') { 
                     sshagent(credentials: ['ubuntu']) { 
+                        sh 'scp ./index.html /home/ubuntu/public/@route-master.org'
                         sh 'scp -r ./build /home/ubuntu/public/@route-master.org'
                     }
                }
