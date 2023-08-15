@@ -48,7 +48,11 @@ const NumOfRows = 10;
 const attractionsSlice = createSlice({
   name: 'attractions',
   initialState,
-  reducers: {},
+  reducers: {
+    resetState: () => {
+      return initialState;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchAttractionsByType.pending, (state) => {
@@ -67,4 +71,5 @@ const attractionsSlice = createSlice({
   },
 });
 
+export const { resetState } = attractionsSlice.actions;
 export default attractionsSlice.reducer;

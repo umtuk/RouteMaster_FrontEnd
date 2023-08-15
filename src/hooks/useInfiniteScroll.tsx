@@ -1,8 +1,11 @@
 import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
 import { fetchAttractionsByType } from 'store/Slices/attractions/thunks';
+import { resetState } from 'store/Slices/attractions/slice';
 
 function useInfiniteScroll() {
+  const { pagetype } = useParams<string>();
   const dispatch = useAppDispatch();
   const data = useAppSelector((state) => state.attractionsThunk.attractions);
   const isLoading = useAppSelector((state) => state.attractionsThunk.isLoading);
@@ -15,10 +18,11 @@ function useInfiniteScroll() {
   const err = useAppSelector((state) => state.attractionsThunk.error);
 
   useEffect(() => {
-    if (data.length === 0) {
-      dispatch(fetchAttractionsByType({ type: 'stay', page: currentPage }));
+    if (pagetype) {
+      dispatch(resetState());
+      dispatch(fetchAttractionsByType({ type: pagetype, page: 1 }));
     }
-  }, [dispatch]);
+  }, [pagetype]);
 
   useEffect(() => {
     const scrollEvent = () => {
