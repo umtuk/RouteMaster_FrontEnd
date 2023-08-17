@@ -32,15 +32,15 @@ function App(): JSX.Element {
           <Route element={<Layout />}>
             <Route path="/plan-list" element={<PlanList />} />
             <Route path="/plan-list/plans" element={<Plans />} />
-            <Route path="/attractions" element={<Attractions />} />
+            <Route path="/attractions/:pagetype" element={<Attractions />} />
             <Route path="/calculate/:id" element={<Calculation />} />
             <Route
               path="/calculate/:id/:name"
               element={<CalculationDetail />}
             />
-            <Route path="/restaurant" element={<Restaurant />} />
+            <Route path="/restaurants" element={<Restaurant />} />
             <Route
-              path="restaurant/details/:id"
+              path="restaurants/details/:id"
               element={<RestaurantDetails />}
             />
           </Route>
